@@ -7,6 +7,8 @@ class AppConstants {
 
   /// PNG
   static const String PLACEHOLDER_IMG = 'assets/images/png/placeholder.png';
+  static const String ERROR_PLACEHOLDER_IMG =
+      'assets/images/png/error_placeholder.png';
 
   /// SVG
   static const String FLUTTER_LOGO_SVG = 'assets/images/svg/flutter.svg';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ososs/features/pokemons/presentation/screens/pokemon_screen.dart';
 import 'package:swipeable_page_route/swipeable_page_route.dart';
 
 import '../../features/home/presentation/screens/home_screen.dart';
@@ -21,6 +22,11 @@ class RouteGenerator {
             ),
           );
         return _errorRoute();
+      case PokemonScreen.routeName:
+        return _screenRoute(
+          settings: settings,
+          createScreen: (param) => const PokemonScreen(),
+        );
       default:
         return _errorRoute();
     }
