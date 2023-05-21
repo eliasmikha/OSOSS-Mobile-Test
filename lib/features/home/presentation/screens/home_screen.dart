@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/HomeScreen';
 
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -26,5 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: const HomeScreenContent(),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    sn.dispose();
+    super.dispose();
   }
 }
