@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ososs/features/home/presentation/screens/home_screen.dart';
 import 'package:swipeable_page_route/swipeable_page_route.dart';
+
+import '../../features/home/presentation/screens/home_screen.dart';
+import '../../features/more/shapes/presentation/screens/shapes_screen.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -10,6 +12,15 @@ class RouteGenerator {
           settings: settings,
           createScreen: (param) => const HomeScreen(),
         );
+      case ShapesScreen.routeName:
+        if (settings.arguments is ShapesScreenParam)
+          return _screenRoute(
+            settings: settings,
+            createScreen: (param) => ShapesScreen(
+              param: param as ShapesScreenParam,
+            ),
+          );
+        return _errorRoute();
       default:
         return _errorRoute();
     }
