@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ososs/features/pokemons/presentation/screens/pokemon_screen.dart';
 
 import '../../../../more/shapes/presentation/screens/shapes_screen.dart';
 
@@ -34,6 +35,10 @@ class HomeScreenNotifier extends ChangeNotifier {
         yourName: _name.isNotEmpty ? _name : "Your name",
       ),
     );
+  }
+
+  void onPage2ButtonPressed() {
+    Navigator.of(context).pushNamed(PokemonScreen.routeName);
   }
 
   @override

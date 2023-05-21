@@ -53,7 +53,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
             // page 2 Button
             _buildPageButton(
               buttonText: 'Go to page 2',
-              onPressed: () {},
+              onPressed: sn.onPage2ButtonPressed,
               backgroundColor: Colors.blue.shade300,
             ),
             20.verticalSpace,
@@ -85,7 +85,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
         ),
       ),
       style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor ?? Colors.blue.shade900,
+        primary: backgroundColor ?? Colors.blue.shade900,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.r),
         ),
