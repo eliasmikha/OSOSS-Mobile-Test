@@ -8,7 +8,20 @@ class ShapesScreenNotifier extends ChangeNotifier {
   late BuildContext context;
   final ShapesScreenParam param;
 
+  int _selectedShape = 0;
+
+  final shapeColor = [
+    Colors.blue.shade900,
+    Colors.blue.shade300,
+    Colors.red,
+  ];
+
   /// Setters & Getters
+  int get selectedShape => _selectedShape;
+  set selectedShape(int value) {
+    _selectedShape = value;
+    notifyListeners();
+  }
 
   /// Methods
   void onBackButtonPressed() {

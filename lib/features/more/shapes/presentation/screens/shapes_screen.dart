@@ -58,4 +58,10 @@ class _ShapesScreenState extends State<ShapesScreen> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    sn.dispose();
+    super.dispose();
+  }
 }
